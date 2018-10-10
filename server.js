@@ -6,6 +6,8 @@ const methodOverride = require('method-override');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+//
+app.use(express.static('/views'));
 
 
 const Pokemon = require('./pokemon')
