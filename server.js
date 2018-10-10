@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+// const ejsLint = require('ejs-lint');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
 
 const Pokemon = require('./pokemon')
 
@@ -25,4 +27,6 @@ app.get('/pokemon/:id', (req, res) => {
 
 app.listen(3000, () => {
     console.log('listening on port 3000')
-  })
+})
+
+module.exports = app;

@@ -11,7 +11,7 @@
         <ul class = "pokemon">
             <% for(let i = 0; i < pokemon.length; i++) { %>
                 <li>
-                    <%= pokemon[i].name %>
+                  <a href = "/pokemon/<%=i%>?_method=GET"> <%= pokemon[i].name %> </a> 
                 </li>
             <% } %>
         </ul>
