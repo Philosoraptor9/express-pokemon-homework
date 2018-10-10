@@ -13,8 +13,9 @@ app.get('/', (req, res) => {
   });
 
   app.get('/pokemon', (req, res) => {
-    const pokeString = JSON.stringify(Pokemon)
-    res.send(pokeString)
+    console.log('getting the pokemon')
+    const context = {pokemon: Pokemon}
+    res.render('index.ejs', context)
   });
 
 app.listen(3000, () => {
