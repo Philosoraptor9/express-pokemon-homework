@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Edit a pokemon</h2>
+    <form method="POST" action="/pokemon/<%=id%>?_method=PUT">
+        <p>Name:</p> <input type = "text" name = "name" value = "<%= pokemon.name %>"/><br/>
+        <p>Image:</p> <input type = "text" name = "name" value = "<%= pokemon.img %>"/><br/>
+    <input type="submit" name="" value="Submit Changes"/>
 </body>
 </html>

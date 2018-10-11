@@ -11,6 +11,13 @@
     <% let display = JSON.stringify(pokemon.name) %>
         <p>
             <%= display %>
+            <% for (let i = 0; i < pokemon.length; i++) { %>
+
+             <form action="/pokemon/<%=i%>?_method=DELETE" method="POST">
+                 <input type="submit" value="delete">
+            </form>
+
+            <% } %>
         </p>
    
 
